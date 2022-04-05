@@ -1,0 +1,22 @@
+def solution(id_list, report, k):
+    id= {}
+    for i in range(len(id_list)):
+        id[id_list[i]] = i
+
+    answer = [0 for i in range(len(id_list))]
+    r = {}
+    for i in report:
+        reporter ,reported = i.split()
+
+        if reported not in r:
+            r[reported] = set()
+        r[reported].add(reporter)
+
+    for i in r:
+        if len(r[i])>=k:
+            for j in r[i]:
+                answer[id[j]]+=1
+
+
+    
+    return answer
