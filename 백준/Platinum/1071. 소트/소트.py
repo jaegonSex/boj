@@ -16,9 +16,6 @@ for i in range(len(nums)):
             result += [c[1][0]] * c[1][1]
             break
 
-    elif len(c) == 1:
-        result += [c[0][0]] * c[0][1]
-        break
 
     if result[-1] + 1 == c[-1][0]:
         result.append(c[-2][0])
