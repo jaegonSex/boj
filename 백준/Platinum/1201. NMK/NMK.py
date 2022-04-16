@@ -14,9 +14,6 @@ right = deque()
 left_count = 0
 right_count = 0
 
-increase_count = m - 1
-decrease_count = k - 1
-
 
 def fill_left(count):
     global left
@@ -44,13 +41,12 @@ def fill_right(count):
 
 roop = 0
 while nums:
-
     if m - right_count > 0:
-        fill_left(m - max(1,right_count))
+        fill_left(m - max(1, right_count))
         left_count += 1
 
     if k - left_count > 0:
-        if fill_right(k - max(1,left_count)):
+        if fill_right(k - max(1, left_count)):
             right_count += 1
     roop += 1
     if roop == n:
