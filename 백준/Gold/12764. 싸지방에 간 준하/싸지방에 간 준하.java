@@ -51,7 +51,6 @@ public class Main {
             heabyong.add(times);
         }
         List<Computer> result = new LinkedList<>();
-
         PriorityQueue<Computer> computers = new PriorityQueue<>(Comparator.comparingInt(c -> c.endTime));
         PriorityQueue<Computer> availableComputers = new PriorityQueue<>(Comparator.comparingInt(c-> c.id));
 
